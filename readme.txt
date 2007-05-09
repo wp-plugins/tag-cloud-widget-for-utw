@@ -16,8 +16,9 @@ It must be used together with the so popular plugin <a href="http://wordpress.or
 I am using it on <a href="http://blog.broom9.com" title="my blog">my blog</a>, which is built on Wordpress 2.1.3 and UTW 3.14159265.
 
 Notes:
+
 * The style of tag cloud is designed by UTW, the reference page is <a title="UTW tag cloud predefiend formats" href="http://www.neato.co.nz/wp-content/plugins/UltimateTagWarrior/ultimate-tag-warrior-help-themes.html#predefinedformats">here</a>
-* Thanks for the widget ¡°<a href="http://automattic.com" title="google search widget">google search widget</a>¡°. I don¡¯t know php at all¡­just made this plugin based on it.
+* Thanks for the widget <a href="http://automattic.com" title="google search widget">google search widget</a>. I don't know php at all, just made this plugin based on it.
 
 
 == Installation ==
