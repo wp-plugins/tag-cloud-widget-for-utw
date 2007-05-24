@@ -20,6 +20,12 @@ Notes:
 * The style of tag cloud is designed by UTW, the reference page is <a title="UTW tag cloud predefiend formats" href="http://www.neato.co.nz/wp-content/plugins/UltimateTagWarrior/ultimate-tag-warrior-help-themes.html#predefinedformats">here</a>
 * Thanks for the widget <a href="http://automattic.com" title="google search widget">google search widget</a>. I don't know php at all, just made this plugin based on it.
 
+Change Log:
+
+* v1.1 2007-05-23
+Added tag number limit for tag cloud
+* v1.0 2007-05-09
+Original version
 
 == Installation ==
 
