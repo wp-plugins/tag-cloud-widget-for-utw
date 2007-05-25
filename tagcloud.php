@@ -30,11 +30,16 @@ function widget_cloud_init() {
 		$title = $options['title'];
 		$tagStyle = $options['tagStyle'];
 		$limit = $options['limit'];
+		$order = $options['order'];
 		// These lines generate our output. Widgets can be very complex
 		// but as you can see here, they can also be very, very simple.
 		echo $before_widget . $before_title . $title . $after_title;
 		echo '<div>';
-		UTW_ShowWeightedTagSet($tagStyle,"",$limit);
+	   if ($order == 'alpha') {
+	           UTW_ShowWeightedTagSetAlphabetical($tagStyle,"",$limit);
+	   } else {
+	           UTW_ShowWeightedTagSet($tagStyle,"",$limit);
+	   }
 		echo '</div>';
 		echo $after_widget;
 	}
@@ -46,13 +51,14 @@ function widget_cloud_init() {
 		// Get our options and see if we're handling a form submission.
 		$options = get_option('widget_cloud');
 		if ( !is_array($options) )
-			$options = array('title'=>'', 'tagStyle'=>__('sizedtagcloud', 'widgets'),'limit'=>150);
+			$options = array('title'=>'', 'tagStyle'=>__('sizedtagcloud', 'widgets'),'limit'=>150,'order'=>'alpha'); 
 		if ( $_POST['cloud-submit'] ) {
 
 			// Remember to sanitize and format use input appropriately.
 			$options['title'] = strip_tags(stripslashes($_POST['cloud-title']));
 			$options['tagStyle'] = strip_tags(stripslashes($_POST['cloud-tagStyle']));
 			$options['limit'] = strip_tags(stripslashes($_POST['cloud-limit']));
+			$options['order'] = strip_tags(stripslashes($_POST['cloud-order']));
 			update_option('widget_cloud', $options);
 		}
 
@@ -60,10 +66,16 @@ function widget_cloud_init() {
 		$title = htmlspecialchars($options['title'], ENT_QUOTES);
 		$tagStyle = htmlspecialchars($options['tagStyle'], ENT_QUOTES);
 		$limit = htmlspecialchars($options['limit'], ENT_QUOTES);
+		$order = htmlspecialchars($options['order'], ENT_QUOTES);
 		// Here is our little form segment. Notice that we don't need a
 		// complete form. This will be embedded into the existing form.
 		echo '<p style="text-align:right;"><label for="cloud-title">' . __('Title:') . ' <input style="width: 200px;" id="cloud-title" name="cloud-title" type="text" value="'.$title.'" /></label></p>';
 		echo '<p style="text-align:right;"><label for="cloud-tagStyle">' . __('Tag Style:') . ' <input style="width: 200px;" id="cloud-tagStyle" name="cloud-tagStyle" type="text" value="'.$tagStyle.'" /></label></p>';
+		echo '<p style="text-align:right;"><label for="cloud-order">' . __('Tag Order:') . ' <select id="cloud-order" name="cloud-order" style="width: 200px;"><option value="alpha"';
+    if ($order == 'alpha') { echo ' selected'; }
+    echo '>Alphabetical</option><option value="rank"';
+    if ($order == 'rank') { echo ' selected'; }
+    echo '>Popular</option></select></label></p>'; 
 		echo '<p style="text-align:right;"><label for="cloud-limit">' . __('Number Limit:') . ' <input style="width: 200px;" id="cloud-limit" name="cloud-limit" type="text" value="'.$limit.'" /></label></p>';
 		echo '<p><a target="_blank" href="http://www.neato.co.nz/wp-content/plugins/UltimateTagWarrior/ultimate-tag-warrior-help-themes.html#predefinedformats">Tag Style Reference</a></p>';
 		echo '<input type="hidden" id="cloud-submit" name="cloud-submit" value="1" />';
@@ -74,7 +86,7 @@ function widget_cloud_init() {
 	
 	// This registers our optional widget control form. Because of this
 	// our widget will have a button that reveals a 300x100 pixel form.
-	register_widget_control(array('Tag Cloud', 'widgets'), 'widget_cloud_control', 300, 150);
+	register_widget_control(array('Tag Cloud', 'widgets'), 'widget_cloud_control', 300, 175);
 	
 }
 
