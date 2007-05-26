@@ -21,6 +21,7 @@ Notes:
 * Thanks for the widget <a href="http://automattic.com" title="google search widget">google search widget</a>. I don't know php at all, just made this plugin based on it.
 
 Change Log:
+
 * v1.2 2007-05-25
 Thanks for Dan Davis, who provided this update for sorting tags alphabetically
 * v1.1 2007-05-23
