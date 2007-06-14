@@ -28,7 +28,7 @@ Change Log:
 
 == Installation ==
 
-1. Download here ¡ª <a href="http://blog.broom9.com/wp-content/uploads/2007/05/tagcloud.zip" title="Tag Cloud Widget for UTW">Tag Cloud Widget for UTW</a>
+1. Download here : <a href="http://blog.broom9.com/wp-content/uploads/2007/05/tagcloud.zip" title="Tag Cloud Widget for UTW">Tag Cloud Widget for UTW</a>
 1. Upload the "tagcloud.php" to the path "/wp-content/plugins/widgets/"
 1. Active this widget in Plugins control panel
 1. In the presentation-&gt;sidebar control panel, drag the tag cloud widget to your sidebar
