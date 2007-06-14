@@ -4,7 +4,7 @@ Donate link: http://blog.broom9.com
 Tags: tag, tag_cloud, sidebar, widget
 Requires at least: 2.0.2
 Tested up to: 2.1.3
-Stable tag: trunk
+Stable tag: 1.2
 
 Adds a tag cloud sidebar widget, used with the plugin Sidebar Widget and Ultimate Tag Warrior 3
 
@@ -22,12 +22,9 @@ Notes:
 
 Change Log:
 
-* v1.2 2007-05-25
-Thanks for Dan Davis, who provided this update for sorting tags alphabetically
-* v1.1 2007-05-23
-Added tag number limit for tag cloud
-* v1.0 2007-05-09
-Original version
+* v1.2 2007-05-25  Thanks for Dan Davis, who provided this update for sorting tags alphabetically
+* v1.1 2007-05-23  Added tag number limit for tag cloud
+* v1.0 2007-05-09  Original version
 
 == Installation ==
 
