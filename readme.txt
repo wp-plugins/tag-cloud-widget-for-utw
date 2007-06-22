@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: broom9
-Donate link: http://blog.broom9.com
+Donate link: http://blog.broom9.com/?page_id=349#donate
 Tags: tag, tag_cloud, sidebar, widget
 Requires at least: 2.0.2
 Tested up to: 2.1.3
-Stable tag: 1.2
+Stable tag: 1.3
 
 Adds a tag cloud sidebar widget, used with the plugin Sidebar Widget and Ultimate Tag Warrior 3
 
@@ -22,9 +22,21 @@ Notes:
 
 Change Log:
 
-* v1.2 2007-05-25  Thanks for Dan Davis, who provided this update for sorting tags alphabetically
-* v1.1 2007-05-23  Added tag number limit for tag cloud
-* v1.0 2007-05-09  Original version
+*   v1.3 2007-06-21
+
+    Added Donate link
+    
+*   v1.2 2007-05-25
+
+    Thanks for Dan Davis, who provided this update for sorting tags alphabetically
+
+*   v1.1 2007-05-23
+
+    Added tag number limit for tag cloud
+    
+*   v1.0 2007-05-09
+
+    Original version
 
 == Installation ==
 
